@@ -13,12 +13,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack {
-                Image(systemName: "pc")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.blue)
-                    .padding()
-                Spacer()
                 Button(action: {
                     showAlert = true
                 }) {
@@ -29,7 +23,6 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                Spacer()
             }
             .blur(radius: showAlert ? 2 : 0)
             .opacity(showAlert ? 0.3 : 1)
